@@ -51,6 +51,8 @@ Sign up for tithing settlement on Slack or at @link["https://m.signupgenius.com/
 
 @announcement["Christmas program choir"]{
 The 9th and 14th wards are combined for Christmas. Practices for a choir happen after church each Sunday in our chapel.
+
+Please come regardless your singing experience!
 }
 
 @announcement["Picture for the ward bulletin"]{

@@ -49,11 +49,11 @@
         (h5 ,term)
         ,name))
 
-(define (opening-prayer name #:term [term "Invocation"])
+(define (opening-prayer [name "By invitation"] #:term [term "Invocation"])
   (person-event name #:term term))
-(define (closing-prayer name #:term [term "Benediction"])
+(define (closing-prayer [name "By invitation"] #:term [term "Benediction"])
   (person-event name #:term term))
-(define (talk name #:term [term "Speaker"])
+(define (talk [name "By invitation"] #:term [term "Speaker"])
   (person-event name #:term term))
 
 (define (opening-hymn name-or-number #:term [term "Opening Hymn"])

@@ -9,7 +9,7 @@
     color: var(--body-color);
     font-family: "Source Sans 3", "Helvetica Neue", sans-serif;
     font-weight: 400;
-    font-size: 20px;
+    font-size: 22px;
 }
 
 body {
@@ -21,14 +21,14 @@ body {
 /* @media (max-width: 896px) { */
 @media (max-device-width: 480px) and (orientation: portrait) {
     :root {
-        font-size: 42px;
+        font-size: 50px;
     }
     body {
         max-width: 100%;
         padding: 0 1.3rem;
     }
     h1 {
-        font-size: 1.8rem;
+        font-size: 1.4rem;
     }
 }
 
