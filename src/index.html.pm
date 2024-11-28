@@ -4,7 +4,7 @@
 
 @(meeting-org #:conducting "Bishop Humpherys"
               #:presiding "Bishop Humpherys"
-              #:organist "Brother Hansen"
+              #:organist "Brother Henson"
               #:chorister "Brother Parish")
 
 
