@@ -1,0 +1,96 @@
+#+title: Sacrament Meeting Program
+
+* Synopsis
+
+Modify the program in [[file:src/index.html.pm][=src/index.html.pm=]] and commit and push the changes. GitHub will automatically render the program to https://slms-9th-ward.github.io/sacrament-program/ .
+
+* Description
+
+** How to modify the Sacrament program
+
+** Markup language details
+
+*** =program-header=
+
+*** =sacrament-meeting-header=
+
+*** =meeting-org=
+
+*** =section=
+
+*** =event=
+
+*** =person-event=
+
+*** =opening-prayer=, =closing-prayer=, =talk=
+
+*** =hymn=
+
+*** =opening-hymn=, =closing-hymn=, =sacrament-hymn=
+
+*** =announcement=
+
+*** =calendar-event=
+
+* Sample program (use this if you break everything and can't recover)
+
+If all hope seems lost, put this chunk in [[file:src/index.html.pm][=src/index.html.pm=]] and then tweak the names and numbers as needed.
+
+#+begin_src racket
+  #lang pollen
+
+  @sacrament-meeting-header{Salt Lake Married Student 9th Ward}
+
+  @(meeting-org #:conducting "Brother James"
+                #:presiding "Bishop Jones"
+                #:organist "Sister Green"
+                #:chorister "Sister Brown")
+
+
+  @section{Program}
+
+  @opening-hymn{68}
+
+  @opening-prayer{Brother Whomever}
+
+  @event{Ward & Stake Business}
+
+  @sacrament-hymn{194}
+
+  @event{Administration of the Sacrament}
+
+  @talk{Sister Soandso}
+
+  @talk{Brother Soandso}
+
+  @hymn[#:term "Rest Hymn"]{100}
+
+  @talk{Another Bloke}
+
+  @event{Announcements}
+
+  @closing-hymn{201}
+
+  @closing-prayer{Sister Whomever}
+
+
+  @section{Announcements}
+
+  @announcement["Ward Slack workspace"]{
+  Our ward uses a Slack workspace to send out announcements about activites, as well as to coordinate service. Please join with @link["https://example.com"]{this invite link}.
+  }
+
+  @announcement["Tithing settlement"]{
+  Sign up for tithing settlement on Slack or at @link["https://example.com"]{this link}.
+  }
+
+  @section{Upcoming Events}
+
+  @calendar-event[#:title "Ward Christmas party" #:date "2024-12-06" #:time "18:00"]{
+  Invite your friends to the ward Christmas party! There will be good food and family-friendly entertainment.
+  }
+#+end_src
+
+* Implementation details
+
+This project uses [[https://docs.racket-lang.org/pollen/][Pollen]] to render the markup. The Sacrament-program specific markup is in [[file:src/pollen.rkt][=src/pollen.rkt=]], which is written in the [[https://racket-lang.org][Racket programming language]].
