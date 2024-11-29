@@ -65,12 +65,12 @@
 (define (sacrament-hymn name-or-number #:term [term "Sacrament Hymn"])
   (hymn name-or-number #:term term))
 
-(define (musical-number name #:term [term "Musical Number"] #:performer performer)
+(define (musical-number name #:term [term "Musical Number"] #:performed-by [performed-by " performed by "] . performer)
   `(div ((class "program-event musical-number"))
         (h5 ,term)
         (p
-         (span ((class "musical-number-name")) ,name)
-         (span ((class "musical-number-performer")) ,performer))))
+         (span ((class "musical-number-name")) ,name) ,performed-by
+         (span ((class "musical-number-performer")) ,@performer))))
 
 (define (render-hymn number name [term "Hymn"])
   `(div ((class "program-event hymn"))

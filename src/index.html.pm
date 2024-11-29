@@ -23,6 +23,8 @@
 
 @talk{Sister Soandso}
 
+@musical-number["Wade In the Water" #:performed-by " sung by "]{Sister Greene}
+
 @talk{Brother Soandso}
 
 @hymn[#:term "Rest Hymn"]{100}
@@ -72,3 +74,5 @@ Invite your friends to the ward Christmas party! There will be good food and fam
 @calendar-event["Ward temple night" #:date "3rd Wednesday and Friday each month" #:time "19:00"]{
 Ward temple nights are the 3rd Wednesday and Friday of every month at 7:00 PM at the Bountiful temple. Sign up to make an appointment at @link["https://www.churchofjesuschrist.org/temples/schedule/appointment?lang=eng"]{this link}.
 }
+
+@small{@link["https://github.com/slms-9th-ward/sacrament-program"]{Edit this program}}
