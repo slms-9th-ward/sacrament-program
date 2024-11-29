@@ -88,7 +88,7 @@ Let's go through this line-by-line and examine what each bit does.
 
  - =@section{Program}= :: This renders a big bit of centered text to begin a section. You might want =@section{Program}=, =@section{Announcements}=, and =@section{Upcomming Events}= in a program. The text inside the curly braces can be whatever you want.
 
- - =@opening-hymn{68}= :: This creates an item in the program with the headline "opening hymn" in small caps. Underneath it puts the hymn number as well as the hymn name. (In this example, /A Might Fortress Is Our God/.) If you just put the hymn number in the braces, it will fetch the name automatically for you. If you put the hymn name (make sure you get the punctuation correct!) it will find the number for you!
+ - =@opening-hymn{68}= :: This creates an item in the program with the headline "opening hymn" in small caps. Underneath it puts the hymn number as well as the hymn name. (In this example, /A Mighty Fortress Is Our God/.) If you just put the hymn number in the braces, it will fetch the name automatically for you. If you put the hymn name (make sure you get the punctuation correct!) it will find the number for you!
 
    If the song is /not/ in the hymn book, there are ways of configuring exactly what is displayed. More on that later.
 
@@ -120,6 +120,32 @@ You should be good to start making and maintaining the program for your meetings
 
 ** Markup language details
 
+This section is a detailed description of every command that you can use to build a program. First, a few terms:
+
+[[file:docs_img/command_anatomy.png]]
+
+ - Commands begin with the =@= character. This is called the *command character*.
+ - The word(s) immediately following the command character are the *command name*.
+ - Some commands have square brackets (=[]=) after the command name. The stuff in here is called the *argument list*.
+ - There are two kinds of things that can go in the argument list:
+   + *Normal arguments*: all text that is an argument to a command *must* be wrapped in double quote characters. (=""=) Numbers don't need quotes.
+   + *Keyword arguments*: some commands take arguments denoted with a keyword. A *keyword* starts with the characters =#:= and has a short name. The *keyword argument* is whatever follows the keyword.
+ - After the square brackets close, then comes text inside curly braces. This is called the *text argument*.
+
+Keywords can appear in any order. That means that this:
+
+#+begin_src racket
+  @calendar-event["Ward party" #:date "2024-03-14" #:time "19:00"]{…}
+#+end_src
+
+and this:
+
+#+begin_src racket
+  @calendar-event["Ward party" #:time "19:00" #:date "2024-03-14"]{…}
+#+end_src
+
+are equivalent. Note that keyword arguments come *after* the regular arguments in the argument list. Also, note that *every* argument is closed in double quotes.
+
 *** =program-header=
 
 *** =sacrament-meeting-header=
@@ -134,6 +160,8 @@ You should be good to start making and maintaining the program for your meetings
 
 *** =opening-prayer=, =closing-prayer=, =talk=
 
+*** =musical-number=
+
 *** =hymn=
 
 *** =opening-hymn=, =closing-hymn=, =sacrament-hymn=
@@ -141,6 +169,20 @@ You should be good to start making and maintaining the program for your meetings
 *** =announcement=
 
 *** =calendar-event=
+
+** Managing edit access
+
+*** Granting someone new access
+
+- The person will need to make an account on GitHub. To do this, they will need an email. During signup they will be prompted for a username and a password.
+
+- Once they have their account created, someone who has access to the program needs to add them to the organization. Go to the [[https://github.com/orgs/slms-9th-ward/people]["People" tab]] and then hit "Invite member".
+
+- Finally, ensure that the person has the right permissions. People who need long-term access should have the role of "Owner". I recommend all members of the bishopric and the clerk have the "owner" role.
+
+*** Revoking access
+
+Simply go to the [[https://github.com/orgs/slms-9th-ward/people]["People" tab]] and hit the button with three dots next to their name. Select "Remove from organization" to revoke their access.
 
 * Sample program (use this if you break everything and can't recover)
 
