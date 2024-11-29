@@ -2,11 +2,48 @@
 
 * Synopsis
 
-Modify the program in [[file:src/index.html.pm][=src/index.html.pm=]] and commit and push the changes. GitHub will automatically render the program to https://slms-9th-ward.github.io/sacrament-program/ .
+Modify the program in [[file:src/index.html.pm][src/index.html.pm]] and commit and push the changes. GitHub will automatically render the program to https://slms-9th-ward.github.io/sacrament-program/ .
 
 * Description
 
-** How to modify the Sacrament program
+This is a system to make a program for a Sacrament meeting—or any other church meeting. Instead of an interface where you select text and use menus/keystrokes to select *bold*, _underline_, font size, etc., this system lets you write down the program /in church-service terms/ like "speaker", "hymn", or "announcement", and then it takes care of the specifics of formatting.
+
+The website you are probably reading this on is called GitHub. GitHub is like YouTube, but for computer source code instead of for videos. GitHub holds files as well as the history of how those files evolved.
+
+When you edit the meeting program on GitHub, GitHub will convert the program you wrote into a perfectly-formatted web page. Here are the basic steps:
+
+[[file:docs_img/edit_flow.png]]
+
+1. There is a text file [[file:src/index.html.pm][src/index.html.pm]] that describes what should be on the program.
+2. You can edit and save this file. GitHub calls saving "Commit changes".
+3. When the file gets saved, GitHub runs a little program that takes the description of the program and turns it into a web page.
+4. The web page with any changes is then visible on the web at large.
+
+** How to modify and save the Sacrament program
+
+Visit https://github.com/slms-9th-ward/sacrament-program in a web browser. Once you are here, you should be presented with a list of files. Click on =src=
+
+[[file:docs_img/smp01.png]]
+
+then click on =index.html.pm=
+
+[[file:docs_img/smp02.png]]
+
+then click on the pencil icon in the right-hand corner of the file viewer to begin editing.
+
+[[file:docs_img/smp03.png]]
+
+After you're done making your edits, click the green "Commit changes…" button.
+
+[[file:docs_img/smp04.png]]
+
+This will prompt you for something called a "Commit message": this is just a place where you can describe what and why you changed something. You can just use the default message "Update index.html.pm", so don't worry if you don't want to change the commit message or the extended description.
+
+Now just hit the big green "Commit changes" button
+
+[[file:docs_img/smp05.png]]
+
+Now you just wait a minute or two for the conversion to run, and then the website should be updated automatically!
 
 ** Markup language details
 
@@ -34,7 +71,7 @@ Modify the program in [[file:src/index.html.pm][=src/index.html.pm=]] and commit
 
 * Sample program (use this if you break everything and can't recover)
 
-If all hope seems lost, put this chunk in [[file:src/index.html.pm][=src/index.html.pm=]] and then tweak the names and numbers as needed.
+If all hope seems lost, put this chunk in [[file:src/index.html.pm][src/index.html.pm]] and then tweak the names and numbers as needed.
 
 #+begin_src racket
   #lang pollen
@@ -93,4 +130,4 @@ If all hope seems lost, put this chunk in [[file:src/index.html.pm][=src/index.h
 
 * Implementation details
 
-This project uses [[https://docs.racket-lang.org/pollen/][Pollen]] to render the markup. The Sacrament-program specific markup is in [[file:src/pollen.rkt][=src/pollen.rkt=]], which is written in the [[https://racket-lang.org][Racket programming language]].
+This project uses [[https://docs.racket-lang.org/pollen/][Pollen]] to render the markup. The Sacrament-program specific markup is in [[file:src/pollen.rkt][src/pollen.rkt]], which is written in the [[https://racket-lang.org][Racket programming language]].
