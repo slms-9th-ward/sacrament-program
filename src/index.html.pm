@@ -5,7 +5,8 @@
 @(meeting-org #:conducting "Bishop Humpherys"
               #:presiding "Bishop Humpherys"
               #:organist "Brother Henson"
-              #:chorister "Brother Parish")
+              #:chorister "Brother Parish"
+              #:pianist "Brother Brown")
 
 
 @section{Program}
