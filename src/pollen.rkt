@@ -60,8 +60,17 @@
   (hymn name-or-number #:term term))
 (define (closing-hymn name-or-number #:term [term "Closing Hymn"])
   (hymn name-or-number #:term term))
+(define (rest-hymn name-or-number #:term [term "Rest Hymn"])
+  (hymn name-or-number #:term term))
 (define (sacrament-hymn name-or-number #:term [term "Sacrament Hymn"])
   (hymn name-or-number #:term term))
+
+(define (musical-number name #:term [term "Musical Number"] #:performer performer)
+  `(div ((class "program-event musical-number"))
+        (h5 ,term)
+        (p
+         (span ((class "musical-number-name")) ,name)
+         (span ((class "musical-number-performer")) ,performer))))
 
 (define (render-hymn number name [term "Hymn"])
   `(div ((class "program-event hymn"))

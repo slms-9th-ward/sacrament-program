@@ -45,6 +45,79 @@ Now just hit the big green "Commit changes" button
 
 Now you just wait a minute or two for the conversion to run, and then the website should be updated automatically!
 
+** Markup language tutorial
+
+Here is what a very basic program might look like:
+
+#+begin_src racket
+  #lang pollen
+
+  @sacrament-meeting-header{Salt Lake Married Student 9th Ward}
+
+  @(meeting-org #:conducting "Brother James"
+                #:presiding "Bishop Jones"
+                #:organist "Sister Green"
+                #:chorister "Sister Brown")
+
+  @section{Program}
+
+  @opening-hymn{68}
+
+  @opening-prayer{Brother Whomever}
+
+  @event{Ward & Stake Business}
+
+  @sacrament-hymn{194}
+
+  @event{Administration of the Sacrament}
+
+  @talk{Sister Soandso}
+#+end_src
+
+This is a meeting with some basic meeting organization details, a section header that says "Program", an opening hymn, prayer, a notice for business, another hymn, notice for the Sacrament, and a talk.
+
+Each of these parts of the program is represented by a /command/. A command looks like =@command-name{Text goes here}=: the =@= character tells the processor that the next bit is a command. The =command-name= tells the processor how to interpret what comes after, and the bit in ={…}= is text or a number that the command uses in the formatting.
+
+Let's go through this line-by-line and examine what each bit does.
+
+ - =#lang pollen= :: This is some information that the formatter needs. (Incidentally, the formatter's name is [[https://docs.racket-lang.org/pollen/][Pollen]], which is why "pollen" is up there.) Don't touch this bit.
+
+ - =@sacrament-meeting-header{Salt Lake Married Student 9th Ward}= :: This writes out the Sacrament meeting header. The bit inside the curly braces is the unit name.
+
+ - =@(meeting-org …)= :: This is a bit of a special command: it sets up the meeting info block. You can change the names inside the double quotes *but it is very important that the double quotes remain!* Missing quotes will confuse the formatter.
+
+ - =@section{Program}= :: This renders a big bit of centered text to begin a section. You might want =@section{Program}=, =@section{Announcements}=, and =@section{Upcomming Events}= in a program. The text inside the curly braces can be whatever you want.
+
+ - =@opening-hymn{68}= :: This creates an item in the program with the headline "opening hymn" in small caps. Underneath it puts the hymn number as well as the hymn name. (In this example, /A Might Fortress Is Our God/.) If you just put the hymn number in the braces, it will fetch the name automatically for you. If you put the hymn name (make sure you get the punctuation correct!) it will find the number for you!
+
+   If the song is /not/ in the hymn book, there are ways of configuring exactly what is displayed. More on that later.
+
+ - =@opening-prayer{Name goes here}= :: Creates an item with the headline "invocation" in small caps and the person's name underneath.
+
+ - =@event{Ward & Stake Business}= :: Creates an item for a generic event in the meeting. You can put any text inside the curly braces.
+
+ - =@sacrament-hymn{194}= :: Like =@opening-hymn=, but the headline is "sacrament hymn".
+
+ - =@event{…Sacrament}= :: Exactly the same as before with =@event{Ward … Business}=, only the text is "Administration of the Sacrament".
+
+ - =@talk{Sister Soandso}= :: Creates an item for a talk.
+
+As you might have guessed, there are commands for =@rest-hymn=, =@closing-hymn=, and =@closing-prayer= which you will want to use. There are other commands for announcements and calendar events. More on those in the next section.
+
+*** Remember this about using commands
+
+ - Commands all start with a =@= character. :: This lets the formatter know what's a command and what isn't.
+
+ - Use only commands documented here. :: Make sure you get the spelling exactly right. The formatter will not automatically guess at corrections.
+
+ - Make sure all braces and double quotes match. :: The formatter expects all =""= and ={}= characters to match up. If they don't, the formatter will not guess at what you meant and will break until you fix it.
+
+ - Use the right command for the job. :: If you need to represent something that doesn't have a command for it, let me know and I'll fix it. In a pinch, a generic =@event= command should work.
+
+That's it! You can play around with it. If you make a mistake and everything seems broken, just replace the contents of =index.html.pm= with the sample provided below and work back from there.
+
+You should be good to start making and maintaining the program for your meetings now. For more details on configuring certain aspects of the commands, keep reading.
+
 ** Markup language details
 
 *** =program-header=
