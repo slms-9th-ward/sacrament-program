@@ -1,19 +1,17 @@
 #lang pollen
 
-@sacrament-meeting-header{Salt Lake Married Student 9th Ward}
+@program-header["Fast and Testimony Meeting"]{Salt Lake Married Student 9th Ward}
 
-@(meeting-org #:conducting "Bishop Humpherys"
-              #:presiding "Bishop Humpherys"
-              #:organist "Brother Henson"
-              #:chorister "Brother Parish"
-              #:pianist "Brother Brown")
+@(meeting-org #:conducting "Brother Griffin"
+              #:presiding "Brother Griffin"
+              #:organist "Brother Henson")
 
 
 @section{Program}
 
 @opening-hymn{68}
 
-@opening-prayer{Brother Whomever}
+@opening-prayer{}
 
 @event{Ward & Stake Business}
 
@@ -21,15 +19,7 @@
 
 @event{Administration of the Sacrament}
 
-@talk{Sister Soandso}
-
-@musical-number["Wade In the Water" #:performed-by " sung by "]{Sister Greene}
-
-@talk{Brother Soandso}
-
-@hymn[#:term "Rest Hymn"]{100}
-
-@talk{Another Bloke}
+@event{Testimonies}
 
 @event{Announcements}
 
