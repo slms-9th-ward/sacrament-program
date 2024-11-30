@@ -2,6 +2,8 @@
 
 @program-header["Salt Lake Married Student 9th Ward"]{Fast and Testimony Meeting}
 
+@welcome-blurb{Visitors and members alike, welcome to the Church of Jesus Christ of Latter-day Saints!}
+
 @(meeting-org #:conducting "Brother Griffin"
               #:presiding "Brother Griffin"
               #:chorister "Sister Evans"
@@ -10,13 +12,13 @@
 
 @section{Program}
 
-@opening-hymn{68}
+@opening-hymn{}
 
 @opening-prayer{}
 
 @event{Ward & Stake Business}
 
-@sacrament-hymn{194}
+@sacrament-hymn{}
 
 @event{Administration of the Sacrament}
 
@@ -24,9 +26,9 @@
 
 @event{Announcements}
 
-@closing-hymn{201}
+@closing-hymn{}
 
-@closing-prayer{Sister Whomever}
+@closing-prayer{}
 
 
 @section{Announcements}

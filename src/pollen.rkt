@@ -15,6 +15,9 @@
 (define (sacrament-meeting-header unit-name)
   (program-header unit-name "Sacrament Meeting Program"))
 
+(define (welcome-blurb . text)
+  `(div ((class "welcome-blurb")) ,@text))
+
 (define (meeting-org #:presiding [presiding #f]
                      #:conducting [conducting #f]
                      #:chorister [chorister #f]
@@ -56,13 +59,13 @@
 (define (talk [name "By invitation"] #:term [term "Speaker"])
   (person-event name #:term term))
 
-(define (opening-hymn name-or-number #:term [term "Opening Hymn"])
+(define (opening-hymn [name-or-number ""] #:term [term "Opening Hymn"])
   (hymn name-or-number #:term term))
-(define (closing-hymn name-or-number #:term [term "Closing Hymn"])
+(define (closing-hymn [name-or-number ""] #:term [term "Closing Hymn"])
   (hymn name-or-number #:term term))
-(define (rest-hymn name-or-number #:term [term "Rest Hymn"])
+(define (rest-hymn [name-or-number ""] #:term [term "Rest Hymn"])
   (hymn name-or-number #:term term))
-(define (sacrament-hymn name-or-number #:term [term "Sacrament Hymn"])
+(define (sacrament-hymn [name-or-number ""] #:term [term "Sacrament Hymn"])
   (hymn name-or-number #:term term))
 
 (define (musical-number name #:term [term "Musical Number"] #:performed-by [performed-by " performed by "] . performer)
@@ -75,7 +78,7 @@
 (define (render-hymn number name [term "Hymn"])
   `(div ((class "program-event hymn"))
         (h5 ,term)
-        (span ((class "hymn-number")) ,(number->string number))
+        (span ((class "hymn-number")) ,(if (number? number) (number->string number) number))
         (span ((class "hymn-name")) ,name)))
 
 (define (make-hymn-from-name name term)
@@ -86,11 +89,13 @@
   (let ([name (assoc num hymn-number-name)])
     (render-hymn num (cdr name) term)))
 
-(define (hymn name-or-number #:term [term "Hymn"])
-  (let ([m (regexp-match "^([0-9]+)$" name-or-number)])
-    (if m
-        (make-hymn-from-number (string->number (cadr m)) term)
-        (make-hymn-from-name name-or-number term))))
+(define (hymn [name-or-number ""] #:term [term "Hymn"])
+  (if (equal? name-or-number "")
+      (render-hymn "By announcement" "" term)
+      (let ([m (regexp-match "^([0-9]+)$" name-or-number)])
+        (if m
+            (make-hymn-from-number (string->number (cadr m)) term)
+            (make-hymn-from-name name-or-number term)))))
 
 (define (announcement header . body-text)
   `(div ((class "announcement"))

@@ -168,6 +168,12 @@ This is just a helper function that wraps =program-header=. These two lines are 
   @sacrament-meeting-header{My Unit Name Here}
 #+end_src
 
+*** =welcome-blurb=
+
+Keyword arguments: None.
+
+Text argument: Required. Text to appear at the top of the program.
+
 *** =meeting-org=
 
 Keyword arguments:
@@ -226,7 +232,7 @@ Text argument: Required. Name of performer.
 Keyword arguments:
  - =#:term= :: Optional. Defaults to "Hymn".
 
-Text argument: Required. Hymn name or number. The renderer will attempt to fetch the name if given the number, or the number given the name. New hymns are in the hymn–number database!
+Text argument: Optional. Defaults to "By announcement". Hymn name or number. The renderer will attempt to fetch the name if given the number, or the number given the name. New hymns are in the hymn–number database!
 
 *** =opening-hymn=, =closing-hymn=, =rest-hymn=, =sacrament-hymn=
 
