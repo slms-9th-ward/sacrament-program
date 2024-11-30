@@ -148,10 +148,10 @@ are equivalent. Note that keyword arguments come *after* the regular arguments i
 
 *** =program-header=
 
-Keyword arguments:
- - =#:title= :: Optional; defaults to ="Sacrament Meeting Program"=. Title at the top of the program.
+Arguments:
+ 1. Required; Unit name.
 
-Text argument: Required. Unit name.
+Text argument: Required. Title at top of program.
 
 # TODO: side/by/side example
 
@@ -161,7 +161,12 @@ Keyword arguments: None.
 
 Text argument: Required. Unit name.
 
-This is just a helper function that wraps =program-header=.
+This is just a helper function that wraps =program-header=. These two lines are equivalent:
+
+#+begin_src racket
+  @program-header["My Unit Name Here"]{Sacrament Meeting Program}
+  @sacrament-meeting-header{My Unit Name Here}
+#+end_src
 
 *** =meeting-org=
 
