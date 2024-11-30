@@ -4,6 +4,7 @@
 
 @(meeting-org #:conducting "Brother Griffin"
               #:presiding "Brother Griffin"
+              #:chorister "Sister Evans"
               #:organist "Brother Henson")
 
 
