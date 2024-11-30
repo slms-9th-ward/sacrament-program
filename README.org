@@ -148,27 +148,104 @@ are equivalent. Note that keyword arguments come *after* the regular arguments i
 
 *** =program-header=
 
+Keyword arguments:
+ - =#:title= :: Optional; defaults to ="Sacrament Meeting Program"=. Title at the top of the program.
+
+Text argument: Required. Unit name.
+
+# TODO: side/by/side example
+
 *** =sacrament-meeting-header=
+
+Keyword arguments: None.
+
+Text argument: Required. Unit name.
+
+This is just a helper function that wraps =program-header=.
 
 *** =meeting-org=
 
+Keyword arguments:
+ - =#:presiding=
+ - =#:conducting=
+ - =#:chorister=
+ - =#:pianist=
+ - =#:organist=
+
+Must be called like so:
+
+#+begin_src racket
+  @(meeting-org #:presiding "…" #:conducting "…"
+                #:chorister "…" #:organist "…")
+#+end_src
+
+All arguments are optional. Any keyword argument not included will not appear in the organization block.
+
 *** =section=
+
+Text argument: Required. Section name.
 
 *** =event=
 
+Text argument: Required. Event name. *Note:* this is a /program/ event, not a /calendar/ event.
+
 *** =person-event=
+
+Keyword arguments:
+ - =#:term= :: Required. Heading over person's name indicating what kind of event it is.
+
+Text argument: Required. Person's name.
+
+This is a generic program event command. The =…-prayer= and =talk= commands are all special cases of this command.
 
 *** =opening-prayer=, =closing-prayer=, =talk=
 
+Keyword arguments:
+ - =#:term= :: Optional. Defaults to "Invocation" for =opening-prayer=, "Benediction" for =closing-prayer=, and "Speaker" for =talk=.
+
+Text argument: Optional. Defaults to "By invitation". Person's name.
+
 *** =musical-number=
+
+Arguments:
+ 1. Required. Name of the piece being performed.
+
+Keyword arguments:
+ - =#:term= :: Optional. Defaults to "Musical Number".
+ - =#:performed-by= :: Optional. Defaults to =" performed by "=. This is the text between the name of the musical number (which will be italicized) and the name of the performer.
+
+Text argument: Required. Name of performer.
 
 *** =hymn=
 
-*** =opening-hymn=, =closing-hymn=, =sacrament-hymn=
+Keyword arguments:
+ - =#:term= :: Optional. Defaults to "Hymn".
+
+Text argument: Required. Hymn name or number. The renderer will attempt to fetch the name if given the number, or the number given the name. New hymns are in the hymn–number database!
+
+*** =opening-hymn=, =closing-hymn=, =rest-hymn=, =sacrament-hymn=
+
+Same as =hymn=, but =#:term= defaults to ="Opening Hymn"=, ="Closing Hymn"=, ="Rest Hymn"=, and ="Sacrament Hymn"= respectively. (May be overridden if the keyword is specified; it is just the default that is different.)
+
+Text argument: Required. Hymn name or number. Same as =hymn=.
 
 *** =announcement=
 
+Arguments:
+ 1. Required. Header for the announcement. Do not forget to wrap in double quotes.
+
+Text argument: Required. Body text for the announcement. May have multiple paragraphs between the curly braces.
+
 *** =calendar-event=
+
+Arguments:
+ 1. Required. Event title. Do not forget the double quotes.
+
+Keyword arguments:
+ - =#:date= :: Required. Date for the event. If provided as a string in [[https://en.wikipedia.org/wiki/ISO_8601][ISO 8601]] format (i.e. =YYYY-MM-DD=) then this date will be formatted nicely like "Sunday, December 1, 2024". Otherwise, the date string will be inserted as-is.
+ - =#:time= :: Optional. Defaults to blank. If given, formatter will attempt to interpret as military time (following the ISO 8601 standard) and will format nicely. E.g. =19:00= will be formatted as "7:00 PM".
+
+Text argument: Required. Event description. May have multiple paragraphs between the curly braces.
 
 ** Managing edit access
 
