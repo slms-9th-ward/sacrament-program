@@ -1,6 +1,6 @@
 #lang pollen
 
-@program-header["Salt Lake Married Student 9th Ward"]{Fast and Testimony Meeting}
+@program-header["Salt Lake Married Student 9th Ward"]{Fast and Testimony Meeting}
 
 @(meeting-org #:conducting "Brother Griffin"
               #:presiding "Brother Griffin"
