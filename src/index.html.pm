@@ -12,7 +12,7 @@
 
 @section{Program}
 
-@opening-hymn{6}
+@opening-hymn{5}
 
 @opening-prayer{Sister Hansen}
 
