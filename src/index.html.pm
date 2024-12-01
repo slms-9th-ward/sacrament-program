@@ -28,7 +28,7 @@
 
 @closing-hymn{1014}
 
-@closing-prayer{Sister Hansen}
+@closing-prayer{Brother Hansen}
 
 
 @section{Announcements}
