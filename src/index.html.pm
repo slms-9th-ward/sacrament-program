@@ -7,18 +7,18 @@
 @(meeting-org #:conducting "Brother Griffin"
               #:presiding "Brother Griffin"
               #:chorister "Sister Evans"
-              #:organist "Brother Henson")
+              #:pianist "Brother Brown")
 
 
 @section{Program}
 
-@opening-hymn{}
+@opening-hymn{6}
 
-@opening-prayer{}
+@opening-prayer{Sister Hansen}
 
 @event{Ward & Stake Business}
 
-@sacrament-hymn{}
+@sacrament-hymn{1007}
 
 @event{Administration of the Sacrament}
 
@@ -26,9 +26,9 @@
 
 @event{Announcements}
 
-@closing-hymn{}
+@closing-hymn{1014}
 
-@closing-prayer{}
+@closing-prayer{Sister Hansen}
 
 
 @section{Announcements}
