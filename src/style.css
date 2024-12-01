@@ -110,6 +110,10 @@ small {
     font-size: 0.7rem;
 }
 
+italic {
+    font-style: italic;
+}
+
 .welcome-blurb {
     font-size: 0.8rem;
     font-style: italic;

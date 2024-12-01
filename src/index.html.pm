@@ -48,7 +48,9 @@ Sign up for tithing settlement on Slack or at @link["https://m.signupgenius.com/
 @announcement["Christmas program choir"]{
 The 9th and 14th wards are combined for Christmas. Practices for a choir happen after church each Sunday in our chapel.
 
-Please come regardless your singing experience!
+There is no minimum experience level to sing in the choir—anyone who wants to come is welcome!
+
+The music for the choir is @italic{Come Thou Long Expected Jesus} and you can download the music @link["https://drive.google.com/file/d/1v4B_o7pI0RUpML3S_TQHDBG7LIun9VtT"]{here}.
 }
 
 @announcement["Picture for the ward bulletin"]{
