@@ -197,6 +197,10 @@ body:has(h1.title) {
     font-size: 18px;
 }
 
+pre {
+    font-family: iosevka_output, monospace;
+}
+
 .code-example {
     display: flex;
     flex-flow: row wrap;

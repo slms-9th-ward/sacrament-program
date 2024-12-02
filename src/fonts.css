@@ -565,3 +565,11 @@
          url('fonts/WOFF/OTF/SourceSans3-BlackIt.otf.woff') format('woff');
 }
 
+@font-face {
+    font-family: iosevka_output;
+    font-style: normal;
+    font-weight: normal;
+    font-stretch: normal;
+    font-display: auto;
+    src: url('fonts/iosevka-output-minimal-Regular.woff2') format('woff2');
+}
