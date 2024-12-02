@@ -1,12 +1,16 @@
-#lang racket/base
+#lang racket
 
-(require racket/list pollen/decode txexpr gregor pollen/tag pollen/unstable/typography)
+(require racket/list pollen/decode txexpr gregor pollen/tag pollen/unstable/typography
+         syntax/parse/define)
 (require "hymn_names.rkt")
 (provide (all-defined-out))
 
 (module setup racket/base
   (provide (all-defined-out))
   (define command-char #\@))
+
+(define (title . text)
+  `(div (h1 ((class "header title")) ,@text)))
 
 (define (program-header unit-name [title "Sacrament Meeting Program"])
   `(div (h1 ((class "header")) ,title)
@@ -59,14 +63,14 @@
 (define (talk [name "By invitation"] #:term [term "Speaker"])
   (person-event name #:term term))
 
-(define (opening-hymn [name-or-number ""] #:term [term "Opening Hymn"])
-  (hymn name-or-number #:term term))
-(define (closing-hymn [name-or-number ""] #:term [term "Closing Hymn"])
-  (hymn name-or-number #:term term))
-(define (rest-hymn [name-or-number ""] #:term [term "Rest Hymn"])
-  (hymn name-or-number #:term term))
-(define (sacrament-hymn [name-or-number ""] #:term [term "Sacrament Hymn"])
-  (hymn name-or-number #:term term))
+(define (make-hymn-shortcut default-term)
+  (λ ([name-or-number ""] #:term [term default-term] #:verses [verses #f])
+    (hymn name-or-number #:term term #:verses verses)))
+
+(define opening-hymn (make-hymn-shortcut "Opening Hymn"))
+(define closing-hymn (make-hymn-shortcut "Closing Hymn"))
+(define rest-hymn (make-hymn-shortcut "Rest Hymn"))
+(define sacrament-hymn (make-hymn-shortcut "Sacrament Hymn"))
 
 (define (musical-number name #:term [term "Musical Number"] #:performed-by [performed-by " performed by "] . performer)
   `(div ((class "program-event musical-number"))
@@ -75,27 +79,38 @@
          (span ((class "musical-number-name")) ,name) ,performed-by
          (span ((class "musical-number-performer")) ,@performer))))
 
-(define (render-hymn number name [term "Hymn"])
+(define (format-verses verse-list)
+  (case (length verse-list)
+    [(0) (error "verse list for hymn may not be empty")]
+    [(1) (format "Verse ~a" (car verse-list))]
+    [(2) (format "Verses ~a and ~a" (car verse-list) (cadr verse-list))]
+    [else (format "Verses ~a, and ~a" (string-join
+                                       (map (λ (x) (format "~a" x))
+                                            (drop-right verse-list 1))
+                                       ", ") (last verse-list))]))
+
+(define (render-hymn number name [term "Hymn"] [verses #f])
   `(div ((class "program-event hymn"))
         (h5 ,term)
         (span ((class "hymn-number")) ,(if (number? number) (number->string number) number))
-        (span ((class "hymn-name")) ,name)))
+        (span ((class "hymn-name")) ,name)
+        ,(when verses `(span ((class "hymn-verses")) ,(format-verses verses)))))
 
-(define (make-hymn-from-name name term)
+(define (make-hymn-from-name name term verses)
   (let ([num-name (findf (λ (x) (equal? (string-locale-downcase (cdr x))
                                         (string-locale-downcase name))) hymn-number-name)])
-    (render-hymn (car num-name) (cdr num-name) term)))
-(define (make-hymn-from-number num term)
+    (render-hymn (car num-name) (cdr num-name) term verses)))
+(define (make-hymn-from-number num term verses)
   (let ([name (assoc num hymn-number-name)])
-    (render-hymn num (cdr name) term)))
+    (render-hymn num (cdr name) term verses)))
 
-(define (hymn [name-or-number ""] #:term [term "Hymn"])
+(define (hymn [name-or-number ""] #:term [term "Hymn"] #:verses [verses #f])
   (if (equal? name-or-number "")
-      (render-hymn "By announcement" "" term)
+      (render-hymn "By announcement" "" term verses)
       (let ([m (regexp-match "^([0-9]+)$" name-or-number)])
         (if m
-            (make-hymn-from-number (string->number (cadr m)) term)
-            (make-hymn-from-name name-or-number term)))))
+            (make-hymn-from-number (string->number (cadr m)) term verses)
+            (make-hymn-from-name name-or-number term verses)))))
 
 (define (announcement header . body-text)
   `(div ((class "announcement"))
@@ -136,6 +151,7 @@
   (txexpr 'root empty
           (decode-elements elements
                            #:txexpr-elements-proc decode-paragraphs
+                           #:exclude-tags '(code pre codeblock)
                            #:string-proc (compose1
                                           #;make-quotes-hangable
                                           smart-quotes
@@ -155,4 +171,26 @@
                                        [("“") (list '(dquo-push) `(dquo-pull ,str))]
                                        [else (list str)])
                                      (list str)))) substrs))))
+
+(define (code-and-render code-literal rendered-as)
+  `(div ((class "code-example"))
+        (div ((class "code-example-code"))
+             (pre ,code-literal))
+        (div ((class "code-example-example"))
+             ,rendered-as)))
+
+#;(define (side-by-side . text)
+  (eprintf "text: ~a\n" text)
+  `(div ((class "code-example"))
+        ,@text))
+
+;; Private functions/macros for documentation
+
+#;(define-syntax (docs-example stx)
+  (syntax-parse stx
+    [(_ cmd)
+     (eprintf "cmd: ~a" (syntax->datum #'cmd))
+     #`(code-and-render
+        #,(format "~a" (syntax->datum #'cmd))
+        #,(read (open-input-string (syntax->datum #'cmd))))]))
 

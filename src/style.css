@@ -5,6 +5,8 @@
     --link-border-color: #888;
     --link-color: #06d;
 
+    --code-background: #dedee0;
+
     background-color: var(--body-background);
     color: var(--body-color);
     font-family: "Source Sans 3", "Helvetica Neue", sans-serif;
@@ -146,6 +148,13 @@ italic {
     font-style: italic;
 }
 
+.hymn-verses {
+    display: block;
+    font-size: 0.8rem;
+    margin-top: -0.2rem;
+    color: var(--body-accent-font-color);
+}
+
 .musical-number-name {
     font-style: italic;
 }
@@ -180,4 +189,33 @@ italic {
 /* Fancy hanging quotation marks */
 dquo-open-pull {
     margin-left: -0.3em;
+}
+
+/* Command examples directives */
+body:has(h1.title) {
+    max-width: 60rem;
+    font-size: 18px;
+}
+
+.code-example {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-around;
+    border-top: dotted var(--link-border-color) 1px;
+    padding: 1em 0;
+}
+
+.code-example-code {
+    border-radius: 5px;
+    background-color: var(--code-background);
+    flex: 1;
+    max-width: 40%;
+    padding: 0 1rem;
+    overflow-y: scroll;
+}
+
+.code-example-example {
+    flex: 1;
+    max-width: 40%;
 }

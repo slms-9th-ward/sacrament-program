@@ -6,7 +6,7 @@ Modify the program in [[file:src/index.html.pm][src/index.html.pm]] and commit a
 
 * Description
 
-This is a system to make a program for a Sacrament meeting—or any other church meeting. Instead of an interface where you select text and use menus/keystrokes to select *bold*, _underline_, font size, etc., this system lets you write down the program /in church-service terms/ like "speaker", "hymn", or "announcement", and then it takes care of the specifics of formatting.
+This is a system to make a program for a Sacrament meeting—or any other church meeting. Instead of an interface where you select text and use menus/keystrokes to select *bold*, /italics/, font size, etc., this system lets you write down the program /in church-service terms/ like "speaker", "hymn", or "announcement", and then it takes care of the specifics of formatting.
 
 The website you are probably reading this on is called GitHub. GitHub is like YouTube, but for computer source code instead of for videos. GitHub holds files as well as the history of how those files evolved.
 
@@ -257,6 +257,16 @@ Keyword arguments:
  - =#:time= :: Optional. Defaults to blank. If given, formatter will attempt to interpret as military time (following the ISO 8601 standard) and will format nicely. E.g. =19:00= will be formatted as "7:00 PM".
 
 Text argument: Required. Event description. May have multiple paragraphs between the curly braces.
+
+*** =em=
+
+Text argument: text to emphasize. Use this instead of =italic= when you want to add some /stress/ or /emphasis/ to some text. Do not use =italic= for emphasis, as =em= is more semantically correct.
+
+*** =italic=
+
+Text argument: text to italicize.
+
+Use this when the text (such as a title) /must/ be italicized. Do not use this for adding emphasis; use the =em= command instead.
 
 ** Managing edit access
 
