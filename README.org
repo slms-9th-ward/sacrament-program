@@ -4,6 +4,8 @@
 
 Modify the program in [[file:src/index.html.pm][src/index.html.pm]] and commit and push the changes. GitHub will automatically render the program to https://slms-9th-ward.github.io/sacrament-program/ .
 
+For examples of formatting commands, see https://slms-9th-ward.github.io/sacrament-program/command_examples.html. This document describes the formatting language in more specific detail.
+
 * Description
 
 This is a system to make a program for a Sacrament meeting—or any other church meeting. Instead of an interface where you select text and use menus/keystrokes to select *bold*, /italics/, font size, etc., this system lets you write down the program /in church-service terms/ like "speaker", "hymn", or "announcement", and then it takes care of the specifics of formatting.

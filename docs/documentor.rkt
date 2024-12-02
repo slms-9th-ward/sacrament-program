@@ -23,4 +23,4 @@
 
 ;; run processor
 
-(process-file "ce_src.scrbl" "command_examples.html.pm")
+(process-file "ce_src.scrbl" "../src/command_examples.html.pm")
