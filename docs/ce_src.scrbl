@@ -6,7 +6,7 @@
 
 ;; program-header
 
-@program-header{Name of the Meeting}
+@program-header{Name of Unit}
 
 @program-header["My Unit Name"]{Another Meeting}
 
@@ -16,7 +16,7 @@
 
 ;; welcome-blurb
 
-@welcome-blurb{Lorem ipsum is not a good thesis topic.}
+@welcome-blurb{Having "lorem ipsum" as your thesis topic is a rather poor decision.}
 
 ;; meeting-org
 
@@ -30,7 +30,9 @@
 
 ;; event
 
-@event{Here's an event.}
+@event{Baby Blessing}
+
+@event{Here's an event}
 
 ;; person-event
 

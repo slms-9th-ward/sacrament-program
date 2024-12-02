@@ -9,7 +9,7 @@
 @section{@pre{ program-header}}
 
 
-@code-and-render["@program-header{Name of the Meeting}"]{@program-header{Name of the Meeting}}
+@code-and-render["@program-header{Name of Unit}"]{@program-header{Name of Unit}}
 
 
 @code-and-render["@program-header[\"My Unit Name\"]{Another Meeting}"]{@program-header["My Unit Name"]{Another Meeting}}
@@ -24,7 +24,7 @@
 @section{@pre{ welcome-blurb}}
 
 
-@code-and-render["@welcome-blurb{Lorem ipsum is not a good thesis topic.}"]{@welcome-blurb{Lorem ipsum is not a good thesis topic.}}
+@code-and-render["@welcome-blurb{Having \"lorem ipsum\" as your thesis topic is a rather poor decision.}"]{@welcome-blurb{Having "lorem ipsum" as your thesis topic is a rather poor decision.}}
 
 
 @section{@pre{ meeting-org}}
@@ -45,7 +45,10 @@
 @section{@pre{ event}}
 
 
-@code-and-render["@event{Here's an event.}"]{@event{Here's an event.}}
+@code-and-render["@event{Baby Blessing}"]{@event{Baby Blessing}}
+
+
+@code-and-render["@event{Here's an event}"]{@event{Here's an event}}
 
 
 @section{@pre{ person-event}}
