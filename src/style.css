@@ -207,19 +207,21 @@ pre {
     align-items: center;
     justify-content: space-around;
     border-top: dotted var(--link-border-color) 1px;
-    padding: 1em 0;
+    padding: 1rem 0;
+}
+
+.code-example > div {
+    flex: 500px;
+    margin: 1rem;
 }
 
 .code-example-code {
     border-radius: 5px;
     background-color: var(--code-background);
-    flex: 1;
-    max-width: 40%;
     padding: 0 1rem;
     overflow-y: scroll;
 }
 
 .code-example-example {
-    flex: 1;
-    max-width: 40%;
 }
+

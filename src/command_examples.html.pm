@@ -30,10 +30,14 @@
 @section{@pre{ meeting-org}}
 
 
-@code-and-render["@(meeting-org #:presiding \"Bishop Albert\" #:conducting \"Brother Big\" #:chorister \"Sister Cee\" #:pianist \"Brother Dee\")"]{@(meeting-org #:presiding "Bishop Albert" #:conducting "Brother Big" #:chorister "Sister Cee" #:pianist "Brother Dee")}
+@code-and-render["@(meeting-org #:presiding \"Bishop Albert\" #:conducting \"Brother Big\"
+              #:chorister \"Sister Cee\" #:pianist \"Brother Dee\")"]{@(meeting-org #:presiding "Bishop Albert" #:conducting "Brother Big"
+              #:chorister "Sister Cee" #:pianist "Brother Dee")}
 
 
-@code-and-render["@(meeting-org #:conducting \"Elder Eames\" #:presiding \"President Faust\" #:chorister \"Brother Gee\" #:organist \"Sister Aetch\")"]{@(meeting-org #:conducting "Elder Eames" #:presiding "President Faust" #:chorister "Brother Gee" #:organist "Sister Aetch")}
+@code-and-render["@(meeting-org #:conducting \"Elder Eames\" #:presiding \"President Faust\"
+              #:chorister \"Brother Gee\" #:organist \"Sister Aetch\")"]{@(meeting-org #:conducting "Elder Eames" #:presiding "President Faust"
+              #:chorister "Brother Gee" #:organist "Sister Aetch")}
 
 
 @section{@pre{ section}}
@@ -150,21 +154,37 @@
 @section{@pre{ announcement}}
 
 
-@code-and-render["@announcement[\"Announcement header here\"]{Lorem ipsum dolor sit amet. Blah blah blah tell the people about this thing. To @em{emphasize} text, use the @code{em} command.
-
-You can have multiple paragraphs in this block. Just separate them with a blank line.}"]{@announcement["Announcement header here"]{Lorem ipsum dolor sit amet. Blah blah blah tell the people about this thing. To @em{emphasize} text, use the @code{em} command.
-
-You can have multiple paragraphs in this block. Just separate them with a blank line.}}
+@code-and-render["@announcement[\"Announcement header here\"]{
+Lorem ipsum dolor sit amet. Blah blah blah tell the people about this thing. To @em{emphasize} text, use the @code{em} command.
+You can have multiple paragraphs in this block. Just separate them with a blank line.
+}"]{@announcement["Announcement header here"]{
+Lorem ipsum dolor sit amet. Blah blah blah tell the people about this thing. To @em{emphasize} text, use the @code{em} command.
+You can have multiple paragraphs in this block. Just separate them with a blank line.
+}}
 
 
 @section{@pre{ calendar-event}}
 
 
-@code-and-render["@calendar-event[\"Ward party\" #:date \"2024-12-06\" #:time \"18:00\"]{Please use the ISO 8601 format for the date and military time for the time. Pollen will format the rest.}"]{@calendar-event["Ward party" #:date "2024-12-06" #:time "18:00"]{Please use the ISO 8601 format for the date and military time for the time. Pollen will format the rest.}}
+@code-and-render["@calendar-event[\"Ward party\" #:date \"2024-12-06\" #:time \"18:00\"]{
+Please format dates like \"YYYY-MM-DD\" (this is called the ISO 8601 format)
+and use military time for the time. Pollen will format the rest.
+}"]{@calendar-event["Ward party" #:date "2024-12-06" #:time "18:00"]{
+Please format dates like "YYYY-MM-DD" (this is called the ISO 8601 format)
+and use military time for the time. Pollen will format the rest.
+}}
 
 
-@code-and-render["@calendar-event[\"Pickleball\" #:date \"Every Wednesday\" #:time \"18:00\"]{Use a non ISO 8601 date for freeform dates/times.}"]{@calendar-event["Pickleball" #:date "Every Wednesday" #:time "18:00"]{Use a non ISO 8601 date for freeform dates/times.}}
+@code-and-render["@calendar-event[\"Pickleball\" #:date \"Every Wednesday\" #:time \"18:00\"]{
+Use a non ISO 8601 date for freeform dates/times.
+}"]{@calendar-event["Pickleball" #:date "Every Wednesday" #:time "18:00"]{
+Use a non ISO 8601 date for freeform dates/times.
+}}
 
 
-@code-and-render["@calendar-event[\"Snow removal\" #:date \"November\"]{We need to shovel the snow around the church.}"]{@calendar-event["Snow removal" #:date "November"]{We need to shovel the snow around the church.}}
+@code-and-render["@calendar-event[\"Snow removal\" #:date \"November\"]{
+We need to shovel the snow around the church.
+}"]{@calendar-event["Snow removal" #:date "November"]{
+We need to shovel the snow around the church.
+}}
 

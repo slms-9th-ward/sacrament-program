@@ -1,7 +1,7 @@
 #lang racket
 
 (define (process-line line-text)
-  (let* ([line-text (string-replace line-text "¶" "\n\n")]
+  (let* ([line-text (string-replace line-text "¶" "\n")]
          [esc-str (string-replace line-text "\"" "\\\"")])
     (cond
       [(regexp-match "^@" line-text)

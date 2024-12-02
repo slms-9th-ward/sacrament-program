@@ -20,9 +20,9 @@
 
 ;; meeting-org
 
-@(meeting-org #:presiding "Bishop Albert" #:conducting "Brother Big" #:chorister "Sister Cee" #:pianist "Brother Dee")
+@(meeting-org #:presiding "Bishop Albert" #:conducting "Brother Big"¶              #:chorister "Sister Cee" #:pianist "Brother Dee")
 
-@(meeting-org #:conducting "Elder Eames" #:presiding "President Faust" #:chorister "Brother Gee" #:organist "Sister Aetch")
+@(meeting-org #:conducting "Elder Eames" #:presiding "President Faust"¶              #:chorister "Brother Gee" #:organist "Sister Aetch")
 
 ;; section
 
@@ -100,12 +100,12 @@
 
 ;; announcement
 
-@announcement["Announcement header here"]{Lorem ipsum dolor sit amet. Blah blah blah tell the people about this thing. To @em{emphasize} text, use the @code{em} command.¶You can have multiple paragraphs in this block. Just separate them with a blank line.}
+@announcement["Announcement header here"]{¶Lorem ipsum dolor sit amet. Blah blah blah tell the people about this thing. To @em{emphasize} text, use the @code{em} command.¶You can have multiple paragraphs in this block. Just separate them with a blank line.¶}
 
 ;; calendar-event
 
-@calendar-event["Ward party" #:date "2024-12-06" #:time "18:00"]{Please use the ISO 8601 format for the date and military time for the time. Pollen will format the rest.}
+@calendar-event["Ward party" #:date "2024-12-06" #:time "18:00"]{¶Please format dates like "YYYY-MM-DD" (this is called the ISO 8601 format)¶and use military time for the time. Pollen will format the rest.¶}
 
-@calendar-event["Pickleball" #:date "Every Wednesday" #:time "18:00"]{Use a non ISO 8601 date for freeform dates/times.}
+@calendar-event["Pickleball" #:date "Every Wednesday" #:time "18:00"]{¶Use a non ISO 8601 date for freeform dates/times.¶}
 
-@calendar-event["Snow removal" #:date "November"]{We need to shovel the snow around the church.}
+@calendar-event["Snow removal" #:date "November"]{¶We need to shovel the snow around the church.¶}
