@@ -1,6 +1,9 @@
 #lang pollen
 
-@program-header["Salt Lake Married Student 9th Ward"]{Fast and Testimony Meeting}
+@;This is called a comment. You won't see it in the final output.
+@;Uncomment this line for Fast Sundays
+@;program-header["Salt Lake Married Student 9th Ward"]{Fast and Testimony Meeting}
+@sacrament-meeting-header{Salt Lake Married Student 9th Ward}
 
 @welcome-blurb{Visitors and members alike, welcome to the Church of Jesus Christ of Latter-day Saints!}
 
