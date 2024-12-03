@@ -1,6 +1,6 @@
 #lang racket
 
-(require racket/list pollen/decode txexpr gregor pollen/tag pollen/unstable/typography
+(require racket/list pollen/core pollen/decode txexpr gregor pollen/tag pollen/unstable/typography
          syntax/parse/define)
 (require "hymn_names.rkt")
 (provide (all-defined-out))
@@ -178,6 +178,23 @@
              (pre ,code-literal))
         (div ((class "code-example-example"))
              ,rendered-as)))
+
+(define (details summary . body)
+  `(details ()
+            (summary () ,summary)
+            ,@body))
+
+(define (make-toc elements)
+  `(div ((class "toc"))
+        (h4 () "Contents")
+    (nav ((class "toc"))
+       (ul ()
+           ,@(map (λ (x) `(li () ,(link (format "#~a" x) `(pre ,(format "~a" x))))) elements)))))
+
+#;(define (make-toc-file filename)
+  (let ([h3s 42 #;(select* 'h3 filename)])
+    (eprintf "h3s: ~a\n" (path->complete-path filename) #;(select-from-doc 'foo (path->complete-path filename)))
+    `(div 42)))
 
 #;(define (side-by-side . text)
   (eprintf "text: ~a\n" text)

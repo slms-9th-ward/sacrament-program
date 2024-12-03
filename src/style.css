@@ -88,6 +88,14 @@ h5 + p {
     margin: 0;
 }
 
+nav.toc {
+    font-size: 0.8rem;
+}
+
+nav.toc ul {
+    line-height: 0.3rem;
+}
+
 a {
     color: var(--link-color);
 }
@@ -220,6 +228,7 @@ pre {
     background-color: var(--code-background);
     padding: 0 1rem;
     overflow-y: scroll;
+    font-size: 0.7rem;
 }
 
 .code-example-example {

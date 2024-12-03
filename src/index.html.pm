@@ -73,4 +73,5 @@ Invite your friends to the ward Christmas party! There will be good food and fam
 Ward temple nights are the 3rd Wednesday and Friday of every month at 7:00 PM at the Bountiful temple. Sign up to make an appointment at @link["https://www.churchofjesuschrist.org/temples/schedule/appointment?lang=eng"]{this link}.
 }
 
-@small{@link["https://github.com/slms-9th-ward/sacrament-program"]{Edit this program}}
+@small{@details["Admin"]{
+@link["https://github.com/slms-9th-ward/sacrament-program"]{Edit this program} ◊ @link["/sacrament-program/command_examples.html"]{Program command examples}}}
