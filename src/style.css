@@ -29,6 +29,7 @@ body {
     body {
         max-width: 100%;
         padding: 0 1.3rem;
+        padding-bottom: 2rem;
     }
     h1 {
         font-size: 1.4rem;
@@ -173,11 +174,14 @@ italic {
 .hymn-links a:hover {
     text-decoration-style: solid;
 }
+.hymn-link-sep {
+    margin: 0 0.5rem;
+    color: var(--body-accent-font-color);
+    font-size: 0.6rem;
+}
 .hymn-link {
-    margin-right: 0.5rem;
 }
 .hymn-pdf-link {
-    margin-left: 0.5rem;
 }
 
 .hymn-verses {

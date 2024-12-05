@@ -93,7 +93,6 @@
   (let* ([hymn-info (if (number? number) (hymn-data number) (make-hasheq))]
          [url (hash-ref hymn-info 'playerlink #f)]
          [pdf-url (hash-ref hymn-info 'pdf #f)])
-    (eprintf "info: ~a\n" hymn-info)
     `(div ((class "program-event hymn"))
           (h5 ,term)
           (span ((class "hymn-number")) ,(if (number? number) (number->string number) number))
@@ -101,7 +100,7 @@
           ,(when (or url pdf-url)
              `(span ((class "hymn-links"))
                     ,(when url `(span ((class "hymn-link")) ,(link url "open music →")))
-                    ,(when (and url pdf-url) "◊")
+                    ,(when (and url pdf-url) '(span ((class "hymn-link-sep")) "◊"))
                     ,(when pdf-url `(span ((class "hymn-pdf-link")) ,(link pdf-url "open as PDF →")))))
           ,(when verses `(span ((class "hymn-verses")) ,(format-verses verses))))))
 
