@@ -4,6 +4,7 @@
     --body-accent-font-color: #424248;
     --link-border-color: #888;
     --link-color: #06d;
+    --subtle-link-color: #4252a8;
 
     --code-background: #dedee0;
 
@@ -17,7 +18,7 @@
 body {
     max-width: 30rem;
     margin: auto;
-    padding: 1rem 1rem;
+    padding: 2rem 1rem;
 }
 
 /* @media (max-width: 896px) { */
@@ -45,7 +46,7 @@ p {
 
 h1 {
     font-weight: 300;
-    margin-top: 3rem;
+    margin-top: 1.5rem;
     margin-bottom: 0.3rem;
 }
 
@@ -98,6 +99,10 @@ nav.toc ul {
 
 a {
     color: var(--link-color);
+    text-decoration-style: dotted;
+}
+a:hover {
+    text-decoration-style: solid;
 }
 
 /* a { */
@@ -154,6 +159,25 @@ italic {
 
 .hymn-name {
     font-style: italic;
+}
+
+.hymn-links {
+    display: block;
+    font-size: 0.8rem;
+    margin-top: -0.2rem;
+}
+.hymn-links a {
+    color: var(--subtle-link-color);
+    text-decoration-style: dotted;
+}
+.hymn-links a:hover {
+    text-decoration-style: solid;
+}
+.hymn-link {
+    margin-right: 0.5rem;
+}
+.hymn-pdf-link {
+    margin-left: 0.5rem;
 }
 
 .hymn-verses {

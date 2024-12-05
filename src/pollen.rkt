@@ -64,8 +64,8 @@
   (person-event name #:term term))
 
 (define (make-hymn-shortcut default-term)
-  (λ ([name-or-number ""] #:term [term default-term] #:verses [verses #f])
-    (hymn name-or-number #:term term #:verses verses)))
+  (λ ([name-or-number ""] #:term [term default-term] #:verses [verses #f] #:verse [verse #f])
+    (hymn name-or-number #:term term #:verses (or verses verse))))
 
 (define opening-hymn (make-hymn-shortcut "Opening Hymn"))
 (define closing-hymn (make-hymn-shortcut "Closing Hymn"))
@@ -90,27 +90,44 @@
                                        ", ") (last verse-list))]))
 
 (define (render-hymn number name [term "Hymn"] [verses #f])
-  `(div ((class "program-event hymn"))
-        (h5 ,term)
-        (span ((class "hymn-number")) ,(if (number? number) (number->string number) number))
-        (span ((class "hymn-name")) ,name)
-        ,(when verses `(span ((class "hymn-verses")) ,(format-verses verses)))))
+  (let* ([hymn-info (if (number? number) (hymn-data number) (make-hasheq))]
+         [url (hash-ref hymn-info 'playerlink #f)]
+         [pdf-url (hash-ref hymn-info 'pdf #f)])
+    (eprintf "info: ~a\n" hymn-info)
+    `(div ((class "program-event hymn"))
+          (h5 ,term)
+          (span ((class "hymn-number")) ,(if (number? number) (number->string number) number))
+          (span ((class "hymn-name")) ,name)
+          ,(when (or url pdf-url)
+             `(span ((class "hymn-links"))
+                    ,(when url `(span ((class "hymn-link")) ,(link url "open music →")))
+                    ,(when (and url pdf-url) "◊")
+                    ,(when pdf-url `(span ((class "hymn-pdf-link")) ,(link pdf-url "open as PDF →")))))
+          ,(when verses `(span ((class "hymn-verses")) ,(format-verses verses))))))
 
 (define (make-hymn-from-name name term verses)
   (let ([num-name (findf (λ (x) (equal? (string-locale-downcase (cdr x))
                                         (string-locale-downcase name))) hymn-number-name)])
     (render-hymn (car num-name) (cdr num-name) term verses)))
+
 (define (make-hymn-from-number num term verses)
   (let ([name (assoc num hymn-number-name)])
     (render-hymn num (cdr name) term verses)))
 
-(define (hymn [name-or-number ""] #:term [term "Hymn"] #:verses [verses #f])
+#;(define (make-hymn-url full-name)
+  (let ([slug (string-join
+               (filter (λ (c) (regexp-match "[a-z]" c))
+                       (string->list (string-downcase full-name)))
+               "-")])
+    (format "https://www.churchofjesuschrist.org/media/music/songs/~a" slug)))
+
+(define (hymn [name-or-number ""] #:term [term "Hymn"] #:verses [verses #f] #:verse [verse #f])
   (if (equal? name-or-number "")
-      (render-hymn "By announcement" "" term verses)
+      (render-hymn "By announcement" "" term (or verses verse))
       (let ([m (regexp-match "^([0-9]+)$" name-or-number)])
         (if m
-            (make-hymn-from-number (string->number (cadr m)) term verses)
-            (make-hymn-from-name name-or-number term verses)))))
+            (make-hymn-from-number (string->number (cadr m)) term (or verses verse))
+            (make-hymn-from-name name-or-number term (or verses verse))))))
 
 (define (announcement header . body-text)
   `(div ((class "announcement"))
@@ -190,6 +207,8 @@
     (nav ((class "toc"))
        (ul ()
            ,@(map (λ (x) `(li () ,(link (format "#~a" x) `(pre ,(format "~a" x))))) elements)))))
+
+(define centerdiv (default-tag-function 'div #:style "text-align:center"))
 
 #;(define (make-toc-file filename)
   (let ([h3s 42 #;(select* 'h3 filename)])

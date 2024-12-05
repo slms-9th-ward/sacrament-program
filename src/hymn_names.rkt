@@ -1,6 +1,14 @@
 #lang racket/base
 
-(provide hymn-number-name)
+(require json)
+
+(provide hymn-number-name hymn-data)
+
+;; Hymn source from https://github.com/MatthewJN/LDSHymns/blob/master/hymns.json
+(define *hymn-db* (with-input-from-file "hymns.json" (λ () (read-json))))
+
+(define (hymn-data hymn-number)
+  (hash-ref *hymn-db* (string->symbol (number->string hymn-number)) (make-hasheq)))
 
 (define hymn-number-name
   '((1 . "The Morning Breaks")
