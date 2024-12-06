@@ -99,9 +99,9 @@
           (span ((class "hymn-name")) ,name)
           ,(when (or url pdf-url)
              `(span ((class "hymn-links"))
-                    ,(when url `(span ((class "hymn-link")) ,(link url "open music →")))
+                    ,(when url `(span ((class "hymn-link")) ,(link url "open music")))
                     ,(when (and url pdf-url) '(span ((class "hymn-link-sep")) "◊"))
-                    ,(when pdf-url `(span ((class "hymn-pdf-link")) ,(link pdf-url "open as PDF →")))))
+                    ,(when pdf-url `(span ((class "hymn-pdf-link")) ,(link pdf-url "open as PDF")))))
           ,(when verses `(span ((class "hymn-verses")) ,(format-verses verses))))))
 
 (define (make-hymn-from-name name term verses)

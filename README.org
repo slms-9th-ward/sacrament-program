@@ -235,6 +235,8 @@ Text argument: Required. Name of performer.
 
 Keyword arguments:
  - =#:term= :: Optional. Defaults to "Hymn".
+ - =#:verses= :: Optional. List of verses to sing. Lists *MUST* be written like this: ='(1 2 3)=. Start lists with a *single* quote, wrap the list with parentheses, and separate the numbers with a space.
+ - =#:verse= :: Alias for =#:verses=: you can use either keyword.
 
 Text argument: Optional. Defaults to "By announcement". Hymn name or number. The renderer will attempt to fetch the name if given the number, or the number given the name. New hymns are in the hymn–number database!
 
@@ -345,6 +347,12 @@ If all hope seems lost, put this chunk in [[file:src/index.html.pm][src/index.ht
   }
 #+end_src
 
+* Using and license
+
+I am still deciding on a license. Biggest thing: no packaging this up and reselling this as a service. If you're using this for non-commercial purposes, knock your socks off.
+
 * Implementation details
 
 This project uses [[https://docs.racket-lang.org/pollen/][Pollen]] to render the markup. The Sacrament-program specific markup is in [[file:src/pollen.rkt][src/pollen.rkt]], which is written in the [[https://racket-lang.org][Racket programming language]].
+
+The main font is [[https://adobe-fonts.github.io/source-sans/][Source Sans]].

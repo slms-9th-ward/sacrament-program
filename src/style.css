@@ -179,8 +179,22 @@ italic {
     color: var(--body-accent-font-color);
     font-size: 0.6rem;
 }
-.hymn-link {
+.hymn-links a::after {
+    content: "↗";
+    vertical-align: super;
+    font-size: 0.6rem;
+    text-decoration: none;
 }
+/* .hymn-links a::after { */
+/*     display: inline-block; */
+/*     content: ""; */
+/*     width: 0.6rem; */
+/*     height: 0.6rem; */
+/*     background-image: url(/external-link.svg); */
+/*     background-size: contain; */
+/*     background-repeat: no-repeat; */
+/*     margin-left: 0.1rem; */
+/* } */
 .hymn-pdf-link {
 }
 
