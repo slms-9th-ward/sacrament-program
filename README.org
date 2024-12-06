@@ -356,3 +356,7 @@ I am still deciding on a license. Biggest thing: no packaging this up and resell
 This project uses [[https://docs.racket-lang.org/pollen/][Pollen]] to render the markup. The Sacrament-program specific markup is in [[file:src/pollen.rkt][src/pollen.rkt]], which is written in the [[https://racket-lang.org][Racket programming language]].
 
 The main font is [[https://adobe-fonts.github.io/source-sans/][Source Sans]].
+
+* Author
+
+[[https://lambdaland.org/][Ashton Wiersdorf]]
