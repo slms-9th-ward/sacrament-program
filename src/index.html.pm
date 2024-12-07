@@ -15,7 +15,7 @@
 
 @section{Program}
 
-@opening-hymn{202}
+@opening-hymn{201}
 
 @opening-prayer{Sister Hansen}
 
