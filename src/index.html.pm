@@ -15,7 +15,7 @@
 
 @section{Program}
 
-@opening-hymn{201}
+@opening-hymn{202}
 
 @opening-prayer{Sister Hansen}
 
@@ -25,7 +25,7 @@
 
 @event{Administration of the Sacrament}
 
-@talk{Brother Cute}
+@talk{Brother Cuter}
 
 @talk{Sister}
 
