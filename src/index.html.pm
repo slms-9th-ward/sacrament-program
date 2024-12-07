@@ -17,7 +17,7 @@
 
 @opening-hymn{201}
 
-@opening-prayer{Sister Hansen}
+@opening-prayer{Sister Hardy}
 
 @event{Ward & Stake Business}
 
@@ -33,7 +33,7 @@
 
 @closing-hymn[]{1014}
 
-@closing-prayer{Brother Hansen}
+@closing-prayer{Brother Hardy}
 
 
 @section{Announcements}
