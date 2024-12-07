@@ -61,7 +61,11 @@ The music for the choir is @italic{Come Thou Long Expected Jesus} and you can do
 @announcement["Picture for the ward bulletin"]{
 We would love to have a picture of your family for our ward bulletin! Please either bring us a picture yourself, or upload one to @link["https://forms.gle/zDnMhWEGNxgcGupN9"]{this form} and we'll print it for you.
 }
-
+@announcement["Christmas Sacrament Meeting"]{
+December 22nd
+Combined with 14th ward
+West Chapel
+Please invite friends}
 
 @section{Upcoming Events}
 
