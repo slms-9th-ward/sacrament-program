@@ -7,15 +7,15 @@
 
 @welcome-blurb{Visitors and members alike, welcome to the Church of Jesus Christ of Latter-day Saints!}
 
-@(meeting-org #:conducting "Brother Griffin"
-              #:presiding "Brother Griffin"
+@(meeting-org #:conducting "Brother Jensen"
+              #:presiding "Bishop Humpherys"
               #:chorister "Sister Evans"
               #:pianist "Brother Brown")
 
 
 @section{Program}
 
-@opening-hymn{5}
+@opening-hymn{201}
 
 @opening-prayer{Sister Hansen}
 
@@ -25,7 +25,9 @@
 
 @event{Administration of the Sacrament}
 
-@event{Testimonies}
+@talk{Brother Cute}
+
+@talk{Sister}
 
 @event{Announcements}
 
