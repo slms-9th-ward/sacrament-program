@@ -51,10 +51,6 @@ Our ward uses a Slack workspace to send out announcements about activites, as we
 If you are new to the ward, please help us move your records in by filling out @link["https://forms.gle/bVHiqHTurYz2GYcs5"]{this short form}.
 }
 
-@announcement["Tithing settlement"]{
-Sign up for tithing settlement on Slack or at @link["https://m.signupgenius.com/#!/showSignUp/10C0A4EA8A729A7FBC07-51852185-tithing"]{this link}.
-}
-
 @announcement["Christmas program choir"]{
 The 9th and 14th wards are combined for Christmas. Practices for a choir happen after church each Sunday in our chapel.
 
