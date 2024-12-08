@@ -1,9 +1,14 @@
 #lang pollen
 
-@;This is called a comment. You won't see it in the final output.
-@;Uncomment this line for Fast Sundays
-@;program-header["Salt Lake Married Student 9th Ward"]{Fast and Testimony Meeting}
+@; This is called a comment. You won't see it in the final output.
+@; Any line starting with "@;" will be ignored by Pollen.
+
+@; For e.g. Fast and Testimony meeting, you can simply remove the ";"
+@; from the fast-and-testimony-header line and add one to the
+@; sacrament-meeting-header line, and then reverse it for the next week.
+
 @sacrament-meeting-header{Salt Lake Married Student 9th Ward}
+@;fast-and-testimony-header{Salt Lake Married Student 9th Ward}
 
 @welcome-blurb{Visitors and members alike, welcome to the Church of Jesus Christ of Latter-day Saints!}
 
@@ -69,14 +74,12 @@ Please invite your friends!}
 
 @section{Upcoming Events}
 
-@calendar-event["Ward Christmas party" #:date "2024-12-06" #:time "18:00"]{
-Invite your friends to the ward Christmas party! There will be good food and family-friendly entertainment.
-}
-
 @calendar-event["First Presidency Christmas devotional" #:date "2024-12-08" #:time "18:00"]{The First Presidency invites Church members and friends to participate in the First Presidency’s Christmas devotional broadcast.}
 
 @calendar-event["Ward temple night" #:date "3rd Wednesday and Friday each month" #:time "19:00"]{
 Ward temple nights are the 3rd Wednesday and Friday of every month at 7:00 PM at the Bountiful temple. Sign up to make an appointment at @link["https://www.churchofjesuschrist.org/temples/schedule/appointment?lang=eng"]{this link}.
 }
 
+@; Please don't remove this line, as it's to help you navigate back to
+@; editing this program.
 @centerdiv{@small{@link["https://github.com/slms-9th-ward/sacrament-program"]{Edit this program} ◊ @link["/sacrament-program/command_examples.html"]{Program command examples}}}
