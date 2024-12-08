@@ -44,7 +44,7 @@
 @section{Announcements}
 
 @announcement["Ward Slack workspace"]{
-Our ward uses a Slack workspace to send out announcements about activites, as well as to coordinate service. Please join with @link["https://join.slack.com/t/saltlakemarri-0vv2943/shared_invite/zt-26qlfk5n4-iUzhY3Mlg6Tky6v1JY9qPw"]{this invite link}.
+Our ward uses a Slack workspace to send out announcements about activites, as well as to coordinate service. Please join with @link["Join me on Slack -- it’s a faster, simpler way to work. Sign up here, from any device: https://join.slack.com/t/saltlakemarri-0vv2943/shared_invite/zt-22jlkviya-R3AcUkNR8K3O3ewDgohaOQ"]{this invite link}.
 }
 
 @announcement["New member form"]{
