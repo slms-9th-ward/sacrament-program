@@ -15,7 +15,7 @@
 @(meeting-org #:conducting "Brother Jensen"
               #:presiding "Bishop Humpherys"
               #:chorister "Sister Evans"
-              #:organist "Brother Hensen")
+              #:pianist "Brother Henson")
 
 
 @section{Program}
