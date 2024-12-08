@@ -15,28 +15,28 @@
 @(meeting-org #:conducting "Brother Jensen"
               #:presiding "Bishop Humpherys"
               #:chorister "Sister Evans"
-              #:pianist "Brother Brown")
+              #:Organist "Brother Hensen")
 
 
 @section{Program}
 
-@opening-hymn{201}
+@opening-hymn{207}
 
 @opening-prayer{Sister Hardy}
 
 @event{Ward & Stake Business}
 
-@sacrament-hymn{1007}
+@sacrament-hymn{193}
 
 @event{Administration of the Sacrament}
 
-@talk{Brother Cuter}
+@talk{Jarrod and Bailey Smith}
 
-@talk{Sister}
+@talk{Elaine and Dallin Penrod}
 
 @event{Announcements}
 
-@closing-hymn[]{1014}
+@closing-hymn[]{204}
 
 @closing-prayer{Brother Hardy}
 
