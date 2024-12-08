@@ -3,6 +3,7 @@
 (require racket/list pollen/core pollen/decode txexpr gregor pollen/tag pollen/unstable/typography
          syntax/parse/define)
 (require "hymn_names.rkt")
+(require "cal.rkt")
 (provide (all-defined-out))
 
 (module setup racket/base
@@ -148,7 +149,7 @@
   (with-handlers ([exn:gregor:parse? (λ (_) #f)])
     (f str)))
 
-(define (calendar-event title #:date the-date #:time [the-time ""] . description)
+(define (calendar-event title #:date the-date #:time [the-time ""] #:id [id #f] #:hours [the-hours #f] . description)
   (let* ([parsed-date (try-dt-parse iso8601->date the-date)]
          [parsed-time (try-dt-parse iso8601->time the-time)]
          [full-string (cond [(and parsed-date parsed-time)
@@ -163,11 +164,21 @@
                              (string-append
                               the-date " at " (~t parsed-time "h:mm a"))]
                             [else
-                             (format "~a ~a" the-date the-time)])])
+                             (format "~a ~a" the-date the-time)])]
+         [ical-data (and (and id (integer? the-hours))
+                         (fmt-event-base64 (format "slms9thward~a" id)
+                                           parsed-date
+                                           parsed-time
+                                           the-hours
+                                           title
+                                           description))])
     `(div ((class "calendar-event"))
           (div ((class "event-metadata"))
                (span ((class "event-title")) ,title)
-               (span ((class "event-datetime")) ,full-string))
+               (span ((class "event-datetime")) ,full-string)
+               ,(when ical-data `(a ((class "event-ical-link")
+                                     (href ,(format "data:text/calendar;base64,~a" ical-data))
+                                     (download "event.ics")) "Add to calendar")))
           (div ((class "event-description"))
           ,@description))))
 

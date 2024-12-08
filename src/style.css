@@ -231,6 +231,24 @@ italic {
     font-size: 0.8rem;
 }
 
+.event-ical-link {
+    display: block;
+    font-size: 0.8rem;
+    margin-top: -0.2rem;
+    color: var(--subtle-link-color);
+    text-decoration-style: dotted;
+}
+
+.event-ical-link::after {
+    content: "↘";
+    font-size: 0.6rem;
+    text-decoration: none;
+}
+
+.event-ical-link:hover {
+    text-decoration-style: solid;
+}
+
 .calendar-event .event-title {
     font-weight: 600;
     display: block;
