@@ -6,7 +6,7 @@
 @title{ Command examples}
 
 
-@make-toc['(program-header sacrament-meeting-header welcome-blurb meeting-org section event person-event talk opening-prayer closing-prayer hymn opening-hymn closing-hymn sacrament-hymn rest-hymn announcement calendar-event)]
+@make-toc['(program-header sacrament-meeting-header fast-and-testimony-header welcome-blurb meeting-org section event person-event talk speaker opening-prayer closing-prayer hymn opening-hymn closing-hymn sacrament-hymn rest-hymn announcement calendar-event)]
 
 @section[#:id "program-header"]{@pre{ program-header}}
 
@@ -14,13 +14,19 @@
 @code-and-render["@program-header{Name of Unit}"]{@program-header{Name of Unit}}
 
 
-@code-and-render["@program-header[\"My Unit Name\"]{Another Meeting}"]{@program-header["My Unit Name"]{Another Meeting}}
+@code-and-render["@program-header[\"Meeting Title\"]{Name of Unit Here}"]{@program-header["Meeting Title"]{Name of Unit Here}}
 
 
 @section[#:id "sacrament-meeting-header"]{@pre{ sacrament-meeting-header}}
 
 
 @code-and-render["@sacrament-meeting-header{Your Unit Here}"]{@sacrament-meeting-header{Your Unit Here}}
+
+
+@section[#:id "fast-and-testimony-header"]{@pre{ fast-and-testimony-header}}
+
+
+@code-and-render["@fast-and-testimony-header{3rd Ward}"]{@fast-and-testimony-header{3rd Ward}}
 
 
 @section[#:id "welcome-blurb"]{@pre{ welcome-blurb}}
@@ -76,6 +82,12 @@
 
 
 @code-and-render["@talk[#:term \"Improvisation\"]{}"]{@talk[#:term "Improvisation"]{}}
+
+
+@section[#:id "speaker"]{@pre{ speaker}}
+
+
+@code-and-render["@speaker{Talker here}"]{@speaker{Talker here}}
 
 
 @section[#:id "opening-prayer"]{@pre{ opening-prayer}}

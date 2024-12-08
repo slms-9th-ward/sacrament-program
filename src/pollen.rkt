@@ -12,12 +12,20 @@
 (define (title . text)
   `(div (h1 ((class "header title")) ,@text)))
 
-(define (program-header unit-name [title "Sacrament Meeting Program"])
-  `(div (h1 ((class "header")) ,title)
-        (h2 ((class "header")) ,unit-name)))
+(define program-header
+  (case-lambda
+    [(unit-name)
+     `(div (h1 ((class "header")) "Sacrament Meeting Program")
+           (h2 ((class "header")) ,unit-name))]
+    [(title . unit-name)
+     `(div (h1 ((class "header")) ,title)
+           (h2 ((class "header")) ,@unit-name))]))
 
 (define (sacrament-meeting-header unit-name)
-  (program-header unit-name "Sacrament Meeting Program"))
+  (program-header "Sacrament Meeting Program" unit-name))
+
+(define (fast-and-testimony-header unit-name)
+  (program-header "Fast and Testimony Meeting" unit-name))
 
 (define (welcome-blurb . text)
   `(div ((class "welcome-blurb")) ,@text))
@@ -62,6 +70,8 @@
   (person-event name #:term term))
 (define (talk [name "By invitation"] #:term [term "Speaker"])
   (person-event name #:term term))
+
+(define speaker talk)                   ; alias
 
 (define (make-hymn-shortcut default-term)
   (λ ([name-or-number ""] #:term [term default-term] #:verses [verses #f] #:verse [verse #f])

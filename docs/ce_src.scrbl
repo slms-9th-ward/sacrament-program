@@ -10,11 +10,15 @@
 
 @program-header{Name of Unit}
 
-@program-header["My Unit Name"]{Another Meeting}
+@program-header["Meeting Title"]{Name of Unit Here}
 
 ;; sacrament-meeting-header
 
 @sacrament-meeting-header{Your Unit Here}
+
+;; fast-and-testimony-header
+
+@fast-and-testimony-header{3rd Ward}
 
 ;; welcome-blurb
 
@@ -49,6 +53,10 @@
 @talk[#:term "Motivational Speaker"]{Brother Brüder}
 
 @talk[#:term "Improvisation"]{}
+
+;; speaker
+
+@speaker{Talker here}
 
 ;; opening-prayer
 
