@@ -15,7 +15,7 @@
 @(meeting-org #:conducting "Brother Jensen"
               #:presiding "Bishop Humpherys"
               #:chorister "Sister Evans"
-              #:Organist "Brother Hensen")
+              #:organist "Brother Hensen")
 
 
 @section{Program}
@@ -36,7 +36,7 @@
 
 @event{Announcements}
 
-@closing-hymn[]{204}
+@closing-hymn{204}
 
 @closing-prayer{Brother Hardy}
 
