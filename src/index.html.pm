@@ -70,7 +70,7 @@ Please invite your friends!}
 
 @section{Upcoming Events}
 
-@calendar-event["First Presidency Christmas devotional" #:date "2024-12-08" #:time "18:00"]{The First Presidency invites Church members and friends to participate in the First Presidency’s Christmas devotional broadcast.}
+@calendar-event["First Presidency Christmas devotional" #:date "2024-12-08" #:time "18:00" #:id "fp-christmas-devo2024" #:hours 1]{The First Presidency invites Church members and friends to participate in the First Presidency’s Christmas devotional broadcast.}
 
 @calendar-event["Ward temple night" #:date "3rd Wednesday and Friday each month" #:time "19:00"]{
 Ward temple nights are the 3rd Wednesday and Friday of every month at 7:00 PM at the Bountiful temple. Sign up to make an appointment at @link["https://www.churchofjesuschrist.org/temples/schedule/appointment?lang=eng"]{this link}.
