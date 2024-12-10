@@ -12,11 +12,15 @@
 
 @welcome-blurb{Visitors and members alike, welcome to the Church of Jesus Christ of Latter-day Saints!}
 
-@(meeting-org #:conducting "Brother Jensen"
-              #:presiding "Bishop Humpherys"
-              #:chorister "Sister Evans"
-              #:pianist "Brother Henson")
+@; Don't forget: keywords ("#:pianist", "#:organist" etc.) are
+@; case sensitive!
 
+@(meeting-org
+    #:conducting "Brother Jensen"
+    #:presiding "Bishop Humpherys"
+    #:chorister "Sister Evans"
+    #:pianist "Brother Henson"
+    )  @; make sure the close paren stays!
 
 @section{Program}
 
@@ -64,13 +68,11 @@ We would love to have a picture of your family for our ward bulletin! Please eit
 }
 
 @calendar-event["Christmas Sacrament Meeting" #:date "2024-12-22" #:time "09:00" #:id "christmas-sunday-service" #:hours 1]{
-We will be combined with 14th ward in the west chapel. (This is our regular chapel.)
+We will be combined with 14th ward in the East chapel for a special Christmas program. There will be light refreshments after the meeting.
 
 Please invite your friends!}
 
 @section{Upcoming Events}
-
-@calendar-event["First Presidency Christmas devotional" #:date "2024-12-08" #:time "18:00" #:id "fp-christmas-devo2024" #:hours 1]{The First Presidency invites Church members and friends to participate in the First Presidency’s Christmas devotional broadcast.}
 
 @calendar-event["Ward temple night" #:date "3rd Wednesday and Friday each month" #:time "19:00"]{
 Ward temple nights are the 3rd Wednesday and Friday of every month at 7:00 PM at the Bountiful temple. Sign up to make an appointment at @link["https://www.churchofjesuschrist.org/temples/schedule/appointment?lang=eng"]{this link}.
