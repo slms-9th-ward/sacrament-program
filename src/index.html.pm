@@ -10,6 +10,8 @@
 @sacrament-meeting-header{Salt Lake Married Student 9th Ward}
 @;fast-and-testimony-header{Salt Lake Married Student 9th Ward}
 
+@banner{christmas_picture.png}
+
 @welcome-blurb{Visitors and members alike, welcome to the Church of Jesus Christ of Latter-day Saints!}
 
 @; Don't forget: keywords ("#:pianist", "#:organist" etc.) are

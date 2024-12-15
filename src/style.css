@@ -102,6 +102,7 @@ a {
     color: var(--link-color);
     text-decoration-style: dotted;
 }
+
 a:hover {
     text-decoration-style: solid;
 }
@@ -135,6 +136,17 @@ italic {
     font-style: italic;
     text-align: center;
     margin: 1em 0;
+}
+
+.banner {
+    margin: -1rem auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.banner > img {
+    height: 15rem;
 }
 
 .meeting-org {
