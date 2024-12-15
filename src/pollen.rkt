@@ -31,6 +31,10 @@
 (define (welcome-blurb . text)
   `(div ((class "welcome-blurb")) ,@text))
 
+(define (banner img-file)
+  `(div ((class "banner"))
+        (img ((src ,(format "/img/~a" img-file)) (class "banner-img")))))
+
 (define (meeting-org #:presiding [presiding #f]
                      #:conducting [conducting #f]
                      #:chorister [chorister #f]
