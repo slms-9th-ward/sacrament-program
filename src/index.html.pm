@@ -67,7 +67,7 @@ We would love to have a picture of your family for our ward bulletin! Please eit
 @calendar-event["Christmas Sacrament Meeting" #:date "2024-12-22" #:time "09:00" #:id "christmas-sunday-service" #:hours 1]{
 We will be combined with 14th ward in the East chapel for a special Christmas program. There will be light refreshments after the meeting.
 
-Please invite your friends!}
+Please take a flyer in the lobby and invite your friends!}
 
 @section{Upcoming Events}
 
