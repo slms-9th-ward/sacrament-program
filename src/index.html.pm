@@ -79,6 +79,11 @@ Please take a flyer in the lobby and invite your friends!}
 Ward temple nights are this week, they're on the 3rd Wednesday and Friday of every month at 7:00 PM at the Bountiful temple. Sign up to make an appointment at @link["https://www.churchofjesuschrist.org/temples/schedule/appointment?lang=eng"]{this link}.
 }
 
+@calendar-event["Ward activity" #:date "2025-1-10" 
+]{
+The ward activity will be the second week of January instead of the first.
+}
+
 @; Please don't remove this line, as it's to help you navigate back to
 @; editing this program.
 @centerdiv{@small{@link["https://github.com/slms-9th-ward/sacrament-program"]{Edit this program} ◊ @link["/sacrament-program/command_examples.html"]{Program command examples}}}
