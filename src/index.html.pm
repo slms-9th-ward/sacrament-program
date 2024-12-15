@@ -28,8 +28,6 @@
 
 @opening-prayer{Brother Jaszkowiak}
 
-@event{Ward & Stake Business}
-
 @sacrament-hymn{194}
 
 @event{Administration of the Sacrament}
@@ -39,6 +37,8 @@
 @rest-hymn{209}
 
 @talk{Aaron Felix}
+
+@event{Ward & Stake Business}
 
 @closing-hymn{206}
 
