@@ -24,21 +24,23 @@
 
 @section{Program}
 
-@opening-hymn{207}
+@opening-hymn{202}
 
 @opening-prayer{Brother Jaszkowiak}
 
 @event{Ward & Stake Business}
 
-@sacrament-hymn{193}
+@sacrament-hymn{194}
 
 @event{Administration of the Sacrament}
 
 @talk{David and Jessica Pearson}
 
-@talk{Visiting High Councilor}
+@intermediate-hymn{209}
 
-@closing-hymn{204}
+@talk{Aaron Felix}
+
+@closing-hymn{206}
 
 @closing-prayer{Sister Jaszkowiak}
 
