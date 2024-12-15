@@ -34,16 +34,13 @@
 
 @event{Administration of the Sacrament}
 
-@talk{Jarrod and Bailey Smith}
+@talk{David and Jessica Pearson}
 
-@talk{Elaine and Dallin Penrod}
-
-@event{Announcements}
+@talk{Visiting High Councilor}
 
 @closing-hymn{204}
 
 @closing-prayer{Sister Jaszkowiak}
-
 
 @section{Announcements}
 
@@ -75,7 +72,7 @@ Please invite your friends!}
 @section{Upcoming Events}
 
 @calendar-event["Ward temple night" #:date "3rd Wednesday and Friday each month" #:time "19:00"]{
-Ward temple nights are the 3rd Wednesday and Friday of every month at 7:00 PM at the Bountiful temple. Sign up to make an appointment at @link["https://www.churchofjesuschrist.org/temples/schedule/appointment?lang=eng"]{this link}.
+Ward temple nights are this week, they're on the 3rd Wednesday and Friday of every month at 7:00 PM at the Bountiful temple. Sign up to make an appointment at @link["https://www.churchofjesuschrist.org/temples/schedule/appointment?lang=eng"]{this link}.
 }
 
 @; Please don't remove this line, as it's to help you navigate back to
