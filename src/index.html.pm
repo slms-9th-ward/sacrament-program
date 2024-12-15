@@ -52,6 +52,10 @@ Our ward uses a Slack workspace to send out announcements about activites, as we
 If you are new to the ward, please help us move your records in by filling out @link["https://forms.gle/bVHiqHTurYz2GYcs5"]{this short form}.
 }
 
+@announcement["Receipts"]{
+If you have receipts to submit, you can do that over the Tools app. If you have any questions, please contact a bishopric member.
+}
+
 @announcement["Christmas program choir"]{
 The 9th and 14th wards are combined for Christmas. Practices for a choir happen after church each Sunday in our chapel.
 
