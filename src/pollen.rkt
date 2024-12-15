@@ -33,7 +33,7 @@
 
 (define (banner img-file)
   `(div ((class "banner"))
-        (img ((src ,(format "/img/~a" img-file)) (class "banner-img")))))
+        (img ((src ,(format "/sacrament-program/img/~a" img-file)) (class "banner-img")))))
 
 (define (meeting-org #:presiding [presiding #f]
                      #:conducting [conducting #f]
