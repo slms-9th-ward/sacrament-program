@@ -26,7 +26,7 @@
 
 @opening-hymn{207}
 
-@opening-prayer{Sister Hardy}
+@opening-prayer{Brother Jaszkowiak}
 
 @event{Ward & Stake Business}
 
@@ -42,7 +42,7 @@
 
 @closing-hymn{204}
 
-@closing-prayer{Brother Hardy}
+@closing-prayer{Sister Jaszkowiak}
 
 
 @section{Announcements}
