@@ -36,7 +36,7 @@
 
 @talk{David and Jessica Pearson}
 
-@intermediate-hymn{209}
+@rest-hymn{209}
 
 @talk{Aaron Felix}
 
