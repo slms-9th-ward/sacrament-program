@@ -28,7 +28,7 @@
 
 @opening-hymn{203}
 
-@opening-prayer{Brother }
+@opening-prayer{Brother Waldrop}
 
 @event{Ward/Stake Business}
 
@@ -46,7 +46,7 @@
 
 @closing-hymn{215}
 
-@closing-prayer{Sister }
+@closing-prayer{Sister Waldrop}
 
 @section{Announcements}
 
