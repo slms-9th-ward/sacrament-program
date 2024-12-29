@@ -21,7 +21,7 @@
     #:conducting "Bishop Humpherys"
     #:presiding "Bishop Humpherys"
     #:chorister "Sister Evans"
-    #:pianist "Brother Wiersdorf"
+    #:organist "Brother Wiersdorf"
     )  @; make sure the close paren stays!
 
 @section{Program}
