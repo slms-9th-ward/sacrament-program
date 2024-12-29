@@ -10,7 +10,7 @@
 @sacrament-meeting-header{Salt Lake Married Student 9th Ward}
 @;fast-and-testimony-header{Salt Lake Married Student 9th Ward}
 
-banner{christmas_picture.png}
+@banner{christmas_picture.png}
 
 @welcome-blurb{Visitors and members alike, welcome to the Church of Jesus Christ of Latter-day Saints!}
 
@@ -32,7 +32,7 @@ banner{christmas_picture.png}
 
 @event{Ward/Stake Business}
 
-@sacrament-hymn{}
+@sacrament-hymn{196}
 
 @event{Administration of the Sacrament}
 
@@ -40,7 +40,7 @@ banner{christmas_picture.png}
 
 @talk{Kaylie Walker Short}
 
-@rest-hymn{}
+@rest-hymn{72}
 
 @talk{Bishop Ben Humpherys}
 
@@ -58,13 +58,13 @@ Our ward uses a Slack workspace to send out announcements about activites, as we
 If you are new to the ward, please help us move your records in by filling out @link["https://forms.gle/bVHiqHTurYz2GYcs5"]{this short form}.
 }
 
-@announcement["5th Sunday Second Hour"]{We will be combined meeting in the middle room for the second hour today}
+@announcement["5th Sunday Second Hour"]{We will be combined meeting in the middle room for the second hour today.}
 
 @announcement["Picture for the ward bulletin"]{
 We would love to have a picture of your family for our ward bulletin! Please either bring us a picture yourself, or upload one to @link["https://forms.gle/zDnMhWEGNxgcGupN9"]{this form} and we'll print it for you.
 }
 
-@announcement["2025 Church Meeting Time"]{We will have Sacrament Meeting at 10:30am stsrting next Sunday}
+@announcement["2025 Church Meeting Time"]{We will have Sacrament Meeting at 10:30 AM starting next Sunday.}
 
 @section{Upcoming Events}
 
