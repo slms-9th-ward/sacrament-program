@@ -26,13 +26,13 @@
 
 @section{Program}
 
-@opening-hymn{203}
+@opening-hymn{140}
 
 @opening-prayer{Brother }
 
 @event{Ward/Stake Business}
 
-@sacrament-hymn{196}
+@sacrament-hymn{180}
 
 @event{Administration of the Sacrament}
 
@@ -44,7 +44,7 @@
 
 @;talk{}
 
-@closing-hymn{215}
+@closing-hymn{217}
 
 @closing-prayer{Sister }
 
