@@ -74,7 +74,7 @@ We would love to have a picture of your family for our ward bulletin! Please eit
 Ward temple nights are on the 3rd Wednesday and Friday of every month at 7:00 PM at the Bountiful temple. Sign up to make an appointment at @link["https://www.churchofjesuschrist.org/temples/schedule/appointment?lang=eng"]{this link}.
 }
 
-@calendar-event["Ward activity" #:date "Friday January 10th" 
+@;calendar-event["Ward activity" #:date "Friday January 10th" 
 ]{Fun Activities and Games with Refreshments}
 
 @; Please don't remove this line, as it's to help you navigate back to
