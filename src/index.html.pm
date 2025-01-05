@@ -28,7 +28,7 @@
 
 @opening-hymn{140}
 
-@opening-prayer{Brother }
+@opening-prayer{Sister Tullis }
 
 @event{Ward/Stake Business}
 
@@ -46,7 +46,7 @@
 
 @closing-hymn{217}
 
-@closing-prayer{Sister }
+@closing-prayer{Brother Tullis }
 
 @section{Announcements}
 
