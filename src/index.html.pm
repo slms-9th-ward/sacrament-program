@@ -58,8 +58,6 @@ Our ward uses a Slack workspace to send out announcements about activites, as we
 If you are new to the ward, please help us move your records in by filling out @link["https://forms.gle/bVHiqHTurYz2GYcs5"]{this short form}.
 }
 
-@;announcement[""]{}
-
 @announcement["Picture for the ward bulletin"]{
 We would love to have a picture of your family for our ward bulletin! Please either bring us a picture yourself, or upload one to @link["https://forms.gle/zDnMhWEGNxgcGupN9"]{this form} and we'll print it for you.
 }
@@ -67,15 +65,13 @@ We would love to have a picture of your family for our ward bulletin! Please eit
 
 @section{Upcoming Events}
 
-@calendar-event["Ward activity" #:date "Friday January 10th" #:time "19:00"
-]{Fun Activities and Games with Refreshments}
+@calendar-event["Ward activity" #:date "Friday January 10th" #:time "19:00" #:hours 2 #:id "jan-2025-ward-activity"]{Fun Activities and Games with Refreshments}
 
 @calendar-event["Ward temple night" #:date "January 15 and 17th" #:time "19:00"]{
 Ward temple nights are on the 3rd Wednesday and Friday of every month at 7:00 PM at the Bountiful temple. Sign up to make an appointment at @link["https://www.churchofjesuschrist.org/temples/schedule/appointment?lang=eng"]{this link}.
 }
 
-@;calendar-event["Ward activity" #:date "Friday January 10th" 
-]{Fun Activities and Games with Refreshments}
+@;calendar-event["Ward activity" #:date "Friday January 10th"]{Fun Activities and Games with Refreshments}
 
 @; Please don't remove this line, as it's to help you navigate back to
 @; editing this program.
