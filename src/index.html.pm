@@ -7,7 +7,7 @@
 @; from the fast-and-testimony-header line and add one to the
 @; sacrament-meeting-header line, and then reverse it for the next week.
 
-@sacrament-meeting-header{Salt Lake Married Student 9th Ward}
+@;sacrament-meeting-header{Salt Lake Married Student 9th Ward}
 @fast-and-testimony-header{Salt Lake Married Student 9th Ward}
 
 @;banner{christmas_picture.png}
