@@ -28,7 +28,7 @@
 
 @opening-hymn{5}
 
-@opening-prayer{Sister Tullis}
+@opening-prayer{Brother Archer}
 
 @event{Ward/Stake Business}
 
@@ -50,7 +50,7 @@
 
 @closing-hymn{105}
 
-@closing-prayer{Brother Tullis }
+@closing-prayer{Sister Archer }
 
 @section{Announcements}
 
