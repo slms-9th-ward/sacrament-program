@@ -32,6 +32,8 @@
 
 @event{Ward/Stake Business}
 
+@event{Baby Blessing- Atkinson}
+
 @sacrament-hymn{184}
 
 @event{Administration of the Sacrament}
