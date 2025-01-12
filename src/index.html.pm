@@ -21,18 +21,18 @@
     #:conducting "Brother Griffin"
     #:presiding "Bishop Humpherys"
     #:chorister "Sister Evans"
-    #:organist "Sister Brown"
+    #:organist "Brother Wiersdorf"
     )  @; make sure the close paren stays!
 
 @section{Program}
 
-@opening-hymn{140}
+@opening-hymn{5}
 
-@opening-prayer{Sister Tullis }
+@opening-prayer{Sister Tullis}
 
 @event{Ward/Stake Business}
 
-@sacrament-hymn{180}
+@sacrament-hymn{184}
 
 @event{Administration of the Sacrament}
 
@@ -40,13 +40,13 @@
 
 @talk{Brother Willey}
 
-@;rest-hymn{72}
+@;rest-hymn{68}
 
 @talk{Sister Hale}
 
 @talk{Brother Hale}
 
-@closing-hymn{217}
+@closing-hymn{105}
 
 @closing-prayer{Brother Tullis }
 
