@@ -50,7 +50,7 @@
 
 @closing-hymn{105}
 
-@closing-prayer{Sister Archer }
+@closing-prayer{Sister Archer}
 
 @section{Announcements}
 
